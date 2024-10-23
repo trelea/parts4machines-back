@@ -1,0 +1,99 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "car",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mark": {
+      "type": "string",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "vin": {
+      "type": "string",
+      "maxLength": 17,
+      "minLength": 17,
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "engine_capacity": {
+      "type": "integer"
+    },
+    "horse_power": {
+      "type": "integer"
+    },
+    "seats": {
+      "type": "integer"
+    },
+    "stock": {
+      "type": "boolean",
+      "default": true
+    },
+    "body": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::body.body",
+      "inversedBy": "cars"
+    },
+    "color": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::color.color",
+      "inversedBy": "cars"
+    },
+    "fuel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fuel.fuel",
+      "inversedBy": "cars"
+    },
+    "traction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::traction.traction",
+      "inversedBy": "cars"
+    },
+    "wheel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wheel.wheel",
+      "inversedBy": "cars"
+    },
+    "transmission": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::transmission.transmission",
+      "inversedBy": "cars"
+    }
+  }
+}
