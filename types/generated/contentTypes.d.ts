@@ -589,6 +589,7 @@ export interface ApiCarCar extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::transmission.transmission'
     >;
+    tags: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

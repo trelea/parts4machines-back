@@ -94,6 +94,10 @@
       "relation": "manyToOne",
       "target": "api::transmission.transmission",
       "inversedBy": "cars"
+    },
+    "tags": {
+      "type": "string",
+      "required": true
     }
   }
 }
